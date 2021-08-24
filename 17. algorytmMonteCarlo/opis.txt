@@ -26,3 +26,4 @@ double d(double x, double y){
 }
 PRZYKŁADOWE DANE WYJŚCIOWE
 3141
+
