@@ -1,0 +1,41 @@
+Treść zadania
+Ada i Serweryn dostali zadanie bardzo na czasie. Punkty szczepień zupełnie nie radzą sobie z ustalaniem kolejności, w jakiej obsługiwać mają zgłaszające się do nich osoby. Poprosili więc grupę CovMed o program, który systematyzowałby ich pracę. Codziennie pracownik punktu szczepień musi dopisać do listy oczekujących pewną liczbę osób. Każda z tych osób posiada unikalny identyfikator oraz priorytet (im niższy, tym wcześniej taka osoba powinna zostać zaszczepiona). Każdy punkt szczepień ma pewną przepustowość, czyli maksymalną liczbę osób, jaką jest w stanie zaszczepić jednego dnia. Pierwszeństwo mają osoby z priorytetem o niższej wartości, a przy równych priorytetach decyduje kolejność zapisu. Ada i Serweryn mają do zaimplementowania rozwiązanie, które pozwoli pracownikowi punktu każdego dnia dopisać do kolejki listę osób oraz usunąć z kolejki osoby, które tego dnia zostaną zaszczepione.
+
+Wejście
+W pierwszej linii wejścia podane są dwie liczby naturalne s i d, oznaczająca liczbę osób szczepionych każdego dnia oraz liczbę dni. Następnie podana jest lista osób dla kolejnych d dni. Lista składa się z liczby naturalnej n, oznaczającej liczbę osób, która danego dnia zapisała się na szczepienie. W kolejnych n liniach podany jest opis osoby, składający się z dwóch liczb naturalnych x - identyfikator osoby oraz p - priorytet osoby.
+
+Wyjście
+Na wyjściu dla każdego dnia należy wypisać identyfikatory osób, których uda się zaszczepić.
+
+1 ≤ d ≤ 100
+1 ≤ s ≤ 10000000
+1 ≤ n ≤ 10000000
+UWAGA! Zadanie ma zostać rozwiązane przy użyciu samodzielnie zaimplementowanego kopca. Nie można korzystać z bibliotek STL.
+
+Przykład
+Wejście:
+5 3
+10
+100 3
+101 4
+102 10
+103 0
+104 3
+105 1
+106 9
+107 9
+108 9
+109 9
+5
+200 4
+201 3
+202 2
+203 1
+204 0
+2
+300 1
+301 10
+Wyjście:
+103 105 100 104 101
+204 203 202 201 200
+300 106 107 108 109

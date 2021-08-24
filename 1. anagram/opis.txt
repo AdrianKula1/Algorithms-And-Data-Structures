@@ -1,0 +1,31 @@
+Treść zadania
+Ada i Serweryn pracują wspólnie w zespole IT w pewnej medycznej grupy badawczej - CovMed. Jak się pewnie domyślacie grupa ma teraz pełne ręce roboty, szukając rozwiązania obecnego globalnego problemu. Naukowcy CovMed pracują właśnie nad sekwencjonowaniem różnych białek. Dla podanej sekwencji aminokwasów w łancuchu pewnego białka oraz określonego zbioru aminokwasów muszą stwierdzić, czy z podanego zbioru można ułożyć tę sekwencję. Ada i Serweryn dostali zadanie, by napisać naukowcom program, który choć trochę ułatwi ich pracę.
+
+Na początku ponumerowali wspólnie od 0 do n-1 wszystkie rodzaje istniejących aminokwasów (Ada puściła wodze fantazji i uznała, że n niekoniecznie odpowiada liczbie istniejących rzeczywiście aminokwasów). Następnie zaczęli pracę nad prostym programem, który korzystając z takiego przyporządkowania zapisywał sekwencję aminokwasów jako ciąg liczb (teoretycznie oznaczał on strukturę jakiegoś białka, ale nie było zamiarem Ady i Serweryna zgadywać, co to za białko). Program miał dodatkowo wczytać zbiór liczb o wartościach z zakresu od 0 do n-1, a na koniec miał określić, czy wykorzystując wszystkie dostępne elementy (aminokwasy) z tego zbioru można utworzyć sekwencję. Aminokwasy w sekwencji i zbiorze oczywiście mogły pojawiać się wielokrotnie.
+
+Wejście
+W pierwszej linii wejścia znajduje się liczba naturalna t, czyli liczba zestawów danych. Każdy zestaw danych składa się z jednej liczby naturalnej n, czyli liczby rodzajów aminokwasów oraz dwóch wierszy składających się z liczb naturalnych, które oznaczają kolejno sekwencję i zbiór. Każdy wiersz kończy się liczbą -1.
+
+1 ≤ t ≤ 10
+1 ≤ n ≤ 1000000
+Wyjście
+Na wyjściu dla każdego zestawu danych należy wypisać słowo "TAK", jeżeli z podanego zbioru można ułożyć sekwencję lub "NIE" w przeciwnym wypadku.
+
+UWAGA! W zadaniu nie można używać bibliotek STL.
+
+Przykład
+Wejście:
+3
+5
+2 4 3 3 1 1 1 0 4 -1
+3 1 3 2 4 1 0 4 1 -1
+2
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -1
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 -1
+3
+1 1 0 1 -1
+1 1 2 1 -1
+Wyjście:
+TAK
+NIE
+NIE

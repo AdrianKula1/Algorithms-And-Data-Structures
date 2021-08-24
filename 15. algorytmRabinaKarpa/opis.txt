@@ -1,0 +1,29 @@
+Treść zadania
+Znamy różne niezwykłe ciągi liczb, jednym z nich jest ciąg Fibonacciego. Dowodem jego nadzwyczajności jest fakt, że pojawia się on wszędzie wokół nas. W przyrodzie, architekturze, inżynierii, sztuce, muzyce, fizyce, matematyce, a nawet w anatomii ludzkiego ciała. Ciekawą właściwością ciągu Fibonacciego jest to, że gdy podzielimy przez siebie dowolne, kolejne dwa wyrazy ciągu, np. 987 / 610, 89 / 55 to stosunek tych liczb będzie równy zawsze tej samej liczbie, równej w przybliżeniu 1.618. Należy dodać, że im większe wyrazy ciągu podzielimy, tym dokładniejsze przybliżenie tej liczby uzyskamy. Liczbę tę nazywa się "złotą liczbą" i oznacza grecką literą φ (czyt. "fi"). Stosunek tego podziału określa się także mianem "złotego podziału" lub "Boskiej proporcji". Warto również wspomnieć o spirali Fibonacciego, szczególnym przypadku tzw. złotej spirali, której szerokość zwiększa się (lub zmniejsza) o 90° dokładnie φ razy (czyli o "złotą liczbę").
+
+
+Pewien matematyk Jan Fryderyk Karol Rozmycie dopatrzył się w naturze innej sekwencji. Mianowicie, jeśli określimy orbitę ciała niebieskiego jako wartość, która jest resztą z dzielenia okresu orbitalnego przez 101, to gdy zapiszemy tak orbity wszystkich planet w wybranym układzie planetarnym, uzyskamy pewną sekwencję wielu liczb z zakresu od 0 do 100. Taka sekwencja liczb tworzy jeden okres, a w nim co najmniej dwa razy pojawia się pewna subsekwencja liczb - X. Suma dwóch poprzednich miejsc wystąpienia subsekwencji mówi o tym, gdzie subsekwencja pojawi się po raz kolejny w danym okresie. Pierwsza pozycja subsekwencji X wykraczająca poza zakresu badanego okresu, pomniejszona o ilość elementów w tym okresie, będzie indeksem wystąpienia tej subsekwencji w kolejnym okresie liczb. Kolejny okres liczb to odpowiednio zmodyfikowane okresy orbitalne innego, najbliższego układu planetarnego. Dodatkowo indeks ten wskazuje na planetę, w najbliższym układzie planetarnym, której masa jest taka sama, jak planety u której wykryto tą subsekwencję po raz pierwszy (indeks pierwszego wystąpienia subsekwencji).
+
+
+Napisz algorytm, który pomoże matematykowi wskazać planetę w najbliższym układzie planetarnym, której masa odpowiada masie planety z badanego układu planetarnego dla wskazanej subsekwencji.
+
+
+WEJŚCIE
+Program wczytuje liczbę naturalną V, będącą ilością planet w badanym układzie planetarnym. Następnie program powinien wczytać V liczb naturalnych, które są resztą z dzielenia okresu orbitalnego planet przez 101. W kolejnym kroku algorytm powinien wczytać liczbę naturalną P, a na koniec P liczb naturalnych reprezentujących subsekwencję X.
+
+0 <= liczby w sekwencji <= 100
+0 <= V, P, N <= 2 000 000 000
+
+WYJŚCIE
+Wyświetl pozycję pierwszego wystąpienia subsekwencji w kolejnym okresie. Zakładając, że sekwencje numerowane są od 0.
+
+WYMAGANIA
+Zadanie powinno być samodzielną implementacją algorytmu Rabina-Karpa.
+
+PRZYKŁADOWE DANE WEJŚCIOWE
+16
+1 1 1 2 3 88 99 24 1 2 3 1 2 3 99 39
+2
+2 3
+PRZYKŁADOWE DANE WYJŚCIOWE
+5

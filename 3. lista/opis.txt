@@ -1,0 +1,109 @@
+Treść zadania
+﻿
+Adę i Serweryna zaniepokoiła pewna informacja, którą podały krajowe media. Okazało się, że służbie zdrowia brakuje systemu który pozwoliłby zarządzać dyżurami pracowników na szpitalnych oddziałach. Większość prac jest obecnie wykonywana ręcznie przy pomocy kartki i ołówka. Jednak ze względu na ilość danych praca ta nie jest zbyt efektywna. Nasi bohaterowie postanowili rzucić wyzwanie programistom. Potrzebują programu który spełni wytyczne które otrzymali:
+
+Program powinien pozwalać na dodawanie oraz usuwanie oddziałów i pracowników. Sytuacja jest dynamiczna więc zmiany w szpitalach nie są żadną nowością. Często pracownika z jednego oddziału trzeba natychmiast przenieść na inny. Każdy oddział ma listę pracowników oraz informację ile osób powinno być na zmianie. Pracownicy zmieniają się na dyżurach cyklicznie. Kiedy pewna liczba osób kończy zmianę wchodzą za nie kolejne zgodnie z kolejnością na liście. Pierwsza osoba znajdująca się na liście bezpośrednio za ostatnią schodzącą ze zmiany staje się „kierownikiem zmiany”. Często istnieje potrzeba przemianowania oddziału lub zmiany danych pracownika. Należy jednak pamiętać, że wciąż obowiązuje rodo. Właśnie dlatego każde kolejne odwołanie do pracownika jest wykonywane przy pomocy numeru ID, nadawanego podczas dodawania nowego pracownika począwszy od 0. Numer identyfikacyjny jest niemodyfikowalny. Najważniejsze jest podawanie informacji na temat pracowników znajdujących się w danym momencie na dyżurze. Co więcej ilość przeprowadzonych zmian na dyżurach w jednym kroku również jest podawana przez operatora systemu.
+
+Wejście:
+W pierwszej linii wejścia podawana jest liczba naturalna n określająca ilość operacji do wykonania. Następnie w n liniach program otrzymuje operacje zgodnie z podanym opisem:
+
+a w nazwaOdziału wielkośćZmiany – dodanie do systemu nowego oddziału zgodnie z podaną nazwą oraz informacją ile osób powinno naraz znajdować się na dyżurze
+a e nazwaPracownika nazwaOdziału – dodanie do systemu pracownika o podanej nazwie i przyłączenie go do określonego oddziału (nowy pracownik zawsze dodawany jest na koniec listy a więc bezpośrednio przed aktualnym kierownikiem zmiany)
+d w nazwaOdziału – usunięcie oddziału o podanej nazwie (usunięcie oddziału nie jest jednoznaczne z usunięciem pracowników)
+d e idPracownika – usunięcie pracownika o podanym numerze id (numery id są nadawane automatycznie od 0 podczas dodawania)
+m idPracownika nazwaOdziału – przeniesienie pracownika o podanym numerze id do stosownego oddziału
+e w nazwaOdziału nowaNazwaOdziału nowaWielkośćZmiany – przemianowanie oddziału wraz ze zmianą ilości osób na dyżurze
+e e idPracownika nazwaPracownika – zmiana nazwy pracownika o podanym id
+s ilośćZmian – wyświetlenie informacji odnośnie pracowników znajdujących się na dyżurach po wykonaniu podanej ilości zmian (kolejna operacja s będzie kontynuowała od ostatniego stanu jaki wyświetliła ostatnia operacja s)
+Wyjście:
+Na wyjściu dla każdej operacji s program powinien wyświetlić informacje o pracownikach na oddziałach w niniejszej formie:
+
+nazwaOddziału1:pracownik1,pracownik2,…,pracownik3.
+...
+(niedobor pracownikow)nazwaOddziału2:pracownik4.
+-
+
+Informacje związane z oddziałami są podawane w osobnych liniach. Komunikat (niedobor pracownikow) jest opcjonalny i wyświetlany wyłącznie wtedy kiedy liczba pracowników którzy powinni znajdować się na zmianie jest mniejsza niż powinna być. Każda operacja s kończy się znakiem „-” w nowej linii. Oddziały jak i pracownicy są wyświetlani zgodnie z kolejnością w jakiej zostali wprowadzeni.
+
+0 < n < 1000000
+
+Uwaga:
+Rozwiązanie ma być samodzielną implementacją list bez wykorzystania bibliotek STL.
+
+Przykładowe wejście 1:
+12
+a w w1 2
+a e e1 w1
+a e e2 w1
+a e e3 w1
+a w w2 4
+a e e4 w2
+a e e5 w2
+a e e6 w2
+s 0
+s 1
+a e e7 w2
+s 0
+Przykładowe wyjście 1:
+w1:e1,e2.
+(niedobor pracownikow)w2:e4,e5,e6.
+-
+w1:e3,e1.
+(niedobor pracownikow)w2:e5,e6,e4.
+-
+w1:e3,e1.
+w2:e5,e6,e4,e7.
+-
+Przykładowe wejście 2:
+2
+a w w1 2
+s 0
+Przykładowe wyjście 2:
+(niedobor pracownikow)w1:.
+-
+Przykładowe wejście 3:
+7
+a w w1 1
+a e e1 w1
+s 0
+s 10
+e w w1 wx 2
+e e 0 ex
+s 0
+Przykładowe wyjście 3:
+w1:e1.
+-
+w1:e1.
+-
+(niedobor pracownikow)wx:ex.
+-
+Przykładowe wejście 4:
+7
+a w w1 1
+a e e1 w1
+s 0
+d w w1
+a w w2 1
+m 0 w2
+s 0
+Przykładowe wyjście 4:
+w1:e1.
+-
+w2:e1.
+-
+Przykładowe wejście 5:
+7
+a w w1 1
+a w w2 1
+a e e1 w1
+a e e2 w1
+s 0
+m 0 w2
+s 0
+Przykładowe wyjście 5:
+w1:e1.
+(niedobor pracownikow)w2:.
+-
+w1:e2.
+w2:e1.
+-

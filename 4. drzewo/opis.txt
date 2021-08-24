@@ -1,0 +1,39 @@
+Treść zadania
+Grupa CovMed rozpoczęła rekrutację nowych badaczy do jednego z działów. Struktura takiego działu jest silnie hierarchiczna. Jest jeden kierownik działu oraz podlegający mu badacze. Każdy z takich badaczy posiada jednego kierownika, a także może posiadać podlegających mu badaczy. Z góry określone jest ilu podwładnych może mieć każdy badacz. Nowo przyjęta osoba zostaje włączona do struktury działu w taki sposób, by miała ona swojego kierownika i by znajdowała się możliwie najwyżej w hierarchii. Kolejność przyjęcia ma znaczenie, ponieważ im wcześniej badacz jest dodany tym jest ważniejszy. To znaczy, że przyjęty badacz musi stać się podwładnym tego kierownika, który spośród wszystkich badaczy został przyjęty najwcześniej i może przyjmować pod swoje skrzydła nowych badaczy.
+
+Ada i Serweryn dostali zadanie, by utworzyć w bazie pracowników strukturę, która przechowuje badaczy we wskazanym porządku. Jako, że sami nie mają podwładnych zlecili pracę jakimś studentom z pobliskiej uczelni.
+
+Wejście
+Na wejściu program otrzyma liczbę naturalną n, oznaczającą liczbę badaczy dodanych do struktury. W kolejnych n wierszach znajdzie się opis badacza składający się z liczby naturalnej g, oznaczającej liczbę osób, którymi nowy badacz może się zaopiekować i jednowyrazowego napisu, który jest pseudonimem osoby dołączającej do działu (bo RODO).
+
+1 ≤ n ≤ 100000
+1 ≤ g ≤ 1000
+Wyjście
+Na wyjściu program ma wypisać pseudonimy wszystkich zatrudnionych badaczy przechodząc strukturę w kolejności postorder. Podwładnych tego samego kierownika rozpatrujemy w kolejności przyjęcia.
+
+UWAGA! W zadaniu nie można używać bibliotek STL.
+
+Przykład
+Wejście:
+10
+1 JanekSprzedawcaFiranek
+2 kasienka_123
+1 zenon
+3 Antoni
+1 mama_zenona
+2 tata_zenona
+1 Czesio
+1 pannaOla
+2 dyzioMarzyciel
+2 tata_zenona_znowu
+Wyjście:
+dyzioMarzyciel
+mama_zenona
+zenon
+tata_zenona_znowu
+tata_zenona
+Czesio
+pannaOla
+Antoni
+kasienka_123
+JanekSprzedawcaFiranek

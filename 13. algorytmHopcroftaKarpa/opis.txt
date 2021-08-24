@@ -1,0 +1,32 @@
+Treść zadania
+Elżbieta Harmonia jest zapalonym graczem warcabów. Jednakże jej zaawansowane umiejętności przewidywania, logicznego myślenia oraz perfekcja w prowadzeniu rozgrywki spowodowały znudzenie tą grą planszową. Nasza bohaterka rozważa nowe zasady i różne urozmaicenia rozgrywki.
+
+
+Rozważa dowolnie dużą kwadratową szachownicę o wymiarach N x N, gdzie N jest liczbą naturalną. Pola na szachownicy numerowane są od 0 do N - 1. Dodatkowo bierki na planszy można rozmieścić tylko na początku rozgrywki i nie można ich przesuwać. Kontynuując pionki należy ustawić na wszystkich polach planszy, co znaczy, że białe pionki zajmują wszystkie białe pola, zaś czarne wszystkie czarne pola. Ponadto pionki przyjmują jedną z czterech funkcji, które wpływają na to jakie pionki może zbić bierka. Wyróżniamy następujący typy bierek:
+
+0 - pionek jest zamrożony, nie może zbić ani zostać zbity,
+1 - pionek bije jeden z pionków znajdujących się na polach: pole oddalone o 3 jednostki w linii prostej przed sobą lub pole oddalone o 2 jednostki w lini prostej przed sobą i o jedną jednostkę w prawo, bądź lewo,
+2 - pionek bije jeden z pionków znajdujących się na polach: pole oddalone o 1 jednostkę w linii prostej przed sobą lub pole oddalone o 1 jednostkę w prawo, bądź lewo,
+3 - pionek bije jeden z pionków znajdujących się na polach: pole oddalone o 1 jednostkę w linii prostej przed sobą lub pole oddalone o 2 jednostki w lini prostej przed sobą i o jedną jednostkę w prawo, bądź lewo.
+Kierunek bicia pionów białych to zachód (w lewo), zaś czarnych to wschód (w prawo), a w lewym górnym rogu (północny-zachód) znajduje się pole czarne.
+
+Rozstawienie pionów powinno być takie, żeby zbić jak najwięcej bierek przeciwnika. Wygrywa ta osoba, której po analizie rozstawienia, zostanie ich więcej. Należy zaznaczyć, że bierki o funkcji 0 nie są wliczane do wyniku. Analiza rozgrywki przebiega tak, że szuka się możliwie największego powiązania pomiędzy polami obu zawodników tak, aby zostało zbite, jak najwięcej par bierek. Powyższa analiza wydaje się bardzo skomplikowana, stąd Elżbieta prosi Cię o pomoc i zaimplementowanie silnika, który pomoże w rozważeniu rozgrywki. Prosi Cię o zaimplementowanie algorytmu, który przedstawi maksymalną liczbę pionów, które nie zostaną zbite.
+
+
+WEJŚCIE
+Algorytm na wejściu otrzymuje liczbę naturalną N, która mówi o wielkości szachownicy. Następnie powinna wczytać N x N liczb naturalnych, które określają funkcje bierek na odpowiednich pozycjach.
+
+0 <= N <= 32000
+
+WYJŚCIE
+Na wyjściu algorytm powinien wypisać maksymalną liczbę bierek, które pozostaną na planszy.
+
+PRZYKŁADOWE DANE WEJŚCIOWE
+5
+1 1 1 1 1
+1 1 1 1 1
+0 0 1 0 1
+1 1 1 1 1
+1 1 1 1 1
+PRZYKŁADOWE DANE WYJŚCIOWE
+19

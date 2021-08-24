@@ -1,0 +1,28 @@
+Treść zadania
+Zalew Zemborzycki to ulubione miejsce wypoczynku wszystkich lublinian. Niestety akwen jest brudny, nieprzyjemnie pachnie, kwitną w nim sinice, a mętna woda nikogo nie zachęca do kąpieli. Zalew Zemborzycki powstał w 1974 r. w wyniku przegrodzenia doliny i spiętrzenia wód rzeki Bystrzycy zaporą ziemną. Należy dodać, że poza funkcją rekreacyjną pełni też rolę ochrony przeciwpowodziowej i funkcję retencyjną.
+
+
+Od kilku lat mówi się o potrzebie rewitalizacji zalewu. Mieszkańcy Lublina są za wprowadzeniem zmian w życie. Chcą, żeby prace zaczęły się możliwie szybko, nawet kosztem całkowitego spuszczenia wody na jakiś czas. Miasto zakłada dwa warianty. Pierwszy to wybranie mułu z dna, a drugi to właśnie spuszczenie wody ze zbiornika i oczyszczeniu go z zalegającego torfu. Koszt takiej rewitalizacji oraz wszystkich prac waha się od 100 do 700 milionów złotych i szacowany czas to 3 - 5 lata.
+
+
+Z hydrotechnicznego punktu widzenia najlepszy jest wariant ze spuszczeniem wody i wybraniem całego namułu. Przed opróżnieniem zbiornika należy obliczyć, ile wody może się w nim znajdować. W tym celu należy określić kształt dna akwenu, a to umożliwi obliczenie przybliżonej objętości wody w zbiorniku. Władze miasta mogą użyć w tym celu łódki i określić głębokość w danym punkcie przy użyciu sonaru.
+
+
+WEJŚCIE
+Na wejściu program dostaje szerokość X i długość Y badanego terenu. Wewnątrz tego terenu znajduje się zalew Zemborzycki, choć nie musi zajmować całej powierzchni prostokąta. Dla każdego testu dodatkowo określona jest funkcja double d(double x, double y), która określa głębokość (lub wysokość dla wartości ujemnych) terenu względem tafli zbiornika w podanym miejscu. Uznajemy, że początek układu współrzędnych pokrywa się z lewym dolnym rogiem danego prostokąta.
+
+0 < X, Y < 1000
+
+WYJŚCIE
+Program powinien wypisać obliczoną objętość jeziora zaokrągloną do jedności.
+
+PRZYKŁADOWE DANE WEJŚCIOWE
+10
+10
+PRZYKŁADOWA FUNKCJA:
+double d(double x, double y){
+ if((x-5)*(x-5)+(y-5)*(y-5) < 10) return 100;
+ return 0;
+}
+PRZYKŁADOWE DANE WYJŚCIOWE
+3141

@@ -1,0 +1,21 @@
+Treść zadania
+Ada i Serweryn otrzymali misję specjalną od resortu zdrowia. Okazuje się, że kolejki do lekarzy są obecnie niespotykanie długie. Nietypowa sytuacja wymagała radykalnych kroków. Pacjenci otrzymują priorytety według których są obsługiwani. Im wartość jest niższa tym wyżej pacjent znajduje się w kolejce. Do władz dotarła jednak informacja, że system z którego korzystają nie działa jak powinien. Kolejność przyjęć jest niewłaściwa. Resort chciałby sprawdzić ile błędów wystąpiło w kolejce. Przez błąd rozumiemy sytuację kiedy dla dowolnej pary w ciągu numer większy znajduje się przed mniejszym. Pomóż naszym bohaterom i napisz program który dla danej kolejności priorytetów obliczy ile wystąpiło błędów podczas przyjęć.
+
+Wejście:
+W pierwszej linii wejścia program otrzymuje liczbę naturalną n a następnie w kolejnej linii n liczb x symbolizujących priorytety przyjmowanych pacjentów.
+
+Wyjście:
+Na wyjściu program powinien wyświetlić liczbę informującą o ilości odnotowanych błędów.
+
+0 < n ≤ 1000000
+
+0 ≤ x ≤ 500000
+
+Uwaga:
+Rozwiązanie powinno wykorzystywać samodzielnie zaimplementowane sortowanie wykorzystujące metodę dziel i zwyciężaj.
+
+Przykładowe wejście:
+7
+1 2 3 4 5 6 0
+Przykładowe wyjście:
+6

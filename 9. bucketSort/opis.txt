@@ -1,0 +1,29 @@
+Treść zadania
+Nasz dobrze znany duet, Ada i Serweryn powraca i po raz kolejny może pomóc służbie zdrowia w opałach. Okazuje się, że pewna firma chce przekazać środki dezynfekcyjne szpitalom. Szkopuł w tym, że partia jest wadliwa. Nie wszystkie butelki z płynem są pełne. Płyn będzie transportowany do szpitali samochodami ciężarowymi. Można w nim umieścić określoną ilość pudełek. Z oczywistych powodów władze centralne chciałyby, żeby placówki otrzymały najpierw te pudełka w których jest najwięcej środka dezynfekcyjnego. Pomóż naszym bohaterom i napisz program który wskaże które pudełka należy zapakować, tak aby transport był jak najbardziej efektywny.
+
+Wejście:
+W pierwszej linii program otrzymuje liczby naturalne n, m i p oznaczające odpowiednio sumaryczną ilość pudełek, ilość butelek z płynem w każdej z nich oraz pojemność samochodu ciężarowego. Następnie w n liniach program otrzymuje opisy pudełek, składające się z m liczb w zakresie od 0 do 1 wskazujące wypełnienie każdej z butelek, podawanych z precyzją do trzech cyfr po przecinku.
+
+Wyjście:
+Na wyjściu program powinien wypisać p opisów pudełek rozpoczynając od sumarycznie najbardziej zapełnionej. W przypadku dwóch pudełek wypełnionych w tym samym stopniu, decyduje kolejność wprowadzania.
+
+1 ≤ n ≤ 50000
+
+1 ≤ m ≤ 50
+
+1 ≤ p ≤ n
+
+Przykład:
+Wejście:
+6 4 3
+0.8 0.7 0.6 0.5
+0 0 0 0.1
+0.5 0.5 0.5 0
+1 1 1 1
+1 0.6 0.8 1
+0.5 0.6 0.7 0.8
+Wyjście:
+1 1 1 1
+1 0.6 0.8 1
+0.8 0.7 0.6 0.5
+UWAGA! Zadanie powinno działać w czasie O(n*m). W programie nie można używać biblioteki STL.

@@ -1,0 +1,35 @@
+Treść zadania
+﻿
+Nasi bohaterowie otrzymali kolejne odpowiedzialne zadanie. Okazuje się, że w danych osobowych pacjentów oczekujących na szczepienia znajdują się błędy. Jest to wynik ataku hakerskiego. Na szczęście pani Jola z działu rejestracji telefonicznej przechowuje wszystkie dane w zeszycie. Teraz trzeba szybko wprowadzić zmiany i poprawić listę zgodnie z informacjami otrzymanymi od pani Joli. Nasi bohaterowie muszą napisać program który pozwoli na modyfikację danych dla i-tego numeru identyfikacyjnego. Co ważne kolejność na liście nie może się zmienić. Osoba której dane zostaną zmodyfikowane pozostaje na tym samym miejscu. Sprawa jest bardzo pilna. Może się bowiem okazać, że zaszczepione zostaną nie te osoby które powinny.
+
+Wejście:
+W pierwszej linii wejścia podawane są dwie liczby, n oraz m. Pierwsza z nich oznacza liczbę pacjentów znajdujących się na liście, natomiast druga oznacza liczbę operacji zmian danych. Następnie w kolejnych n liniach program otrzymuje opisy pacjentów składające się z unikalnego numeru identyfikacyjnego, oraz imienia i nazwiska. Na koniec w m liniach program otrzymuje m opisów operacji modyfikacji danych, składający się z liczby i będącej numerem osoby wybieranej według numeru identyfikacyjnego w kolejności rosnącej. Po liczbie i następuje standardowy opis osoby składający się z nowego numeru id, imienia oraz nazwiska. Osoby numerowane są od 0.
+
+Wyjście:
+Na wyjściu dla każdej operacji m program powinien wypisać dane dwóch osób poprzedzających modyfikowany wpis, osobę wyszukaną (przed zmianą) oraz dwie znajdujące się po niej zgodnie z kolejnością wejściową. Jeżeli wyświetlenie poprzedzających lub następujących osób nie jest możliwe, wyświetlana jest mniejsza liczba wyników.
+
+0 < n < 1000000
+
+Uwaga:
+Program powinien wykorzystywać samodzielną implementację algorytmu "magiczne piątki".
+
+Przykładowe wejście:
+6 2
+3 Adam Nowak
+1 Joanna Kowalska
+9 Grzegorz Wilk
+7 Marcin Lewandowski
+33 Katarzyna Szymanska
+22 Anna Skonczona
+3 2 Nowa Osoba
+0 1 Test Test
+Przykładowe wyjście:
+3 Adam Nowak
+1 Joanna Kowalska
+9 Grzegorz Wilk
+7 Marcin Lewandowski
+33 Katarzyna Szymanska
+3 Adam Nowak
+1 Joanna Kowalska
+2 Nowa Osoba
+7 Marcin Lewandowski

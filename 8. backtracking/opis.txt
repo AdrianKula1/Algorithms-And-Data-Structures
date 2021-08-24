@@ -1,0 +1,22 @@
+Treść zadania
+Kierownictwo CovMed zaczęło dostrzegać mankamenty związane z umiejscowieniem kamer w pomieszczeniach. Przede wszystkim nie udało się ich zamontować wszędzie. Postanowili więc zatrudnić ekipę remontową, która dostosowałaby powierzchnię sufitową. W ten sposób przy odpowiednim koszcie w dowolnym miejscu w pomieszczeniu możliwe byłoby zainstalowanie kamery.
+
+Z drugiej strony dobrze by było zminimalizować koszt instalacji. Ada i Serweryn dostali w związku z tym nowe zadanie, by dla nowej konfiguracji kwadratowych pomieszczeń ustalić, gdzie należy zamontować kamery, by koszt był jak najmniejszy.
+
+Wejście
+Na wejściu program otrzyma liczbę dodatnią 1<=n<=35, oznaczającą rozmiar kwadratowego pomieszczenia, na którym należy rozmieścić n kamer. W kolejnych n wierszach znajdzie sią ciąg n liczb naturalnych, odnoszących się do kolejnych kwadratowych obszarów, na którym można zamontować kamerę, gdzie każda liczba będzie oznaczała koszt instalacji w tym miejscu.
+
+Wyjście
+Na wyjściu program musi wypisać n liczb oznaczających numer rzędu, w którym należy ustawić kamerę dla każdej kolumny. Wyświetlone rozwiązanie musi być pierwsze w porządku leksykograficznym. Należy przyjąć, że rzędy numerowane są od 0.
+
+UWAGA! W zadaniu nie można używać bibliotek STL.
+
+Przykład
+Wejście:
+4
+5 3 2 2
+1 2 3 3
+2 1 8 7
+3 5 3 2
+Wyjście:
+1 2 0 3

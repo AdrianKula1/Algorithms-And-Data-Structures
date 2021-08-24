@@ -1,0 +1,23 @@
+Treść zadania
+Okazuje się, że rozsądnie zorganizowana wymiana lekarstw między placówkami medycznymi jest dużym wyzwaniem. Każda z placówek chciałaby w miarę szybko dostać informację o tym, gdzie znajdą preparaty, których im akurat brakuje. Jeżeli w którymś ośrodku pracownicy odnotują brak w zaopatrzeniu, mogą wysłać transport medyczny do innej placówki, by ta podzieliła się swoimi zapasami. Przeważnie jednak pracownicy potrzebują medykamentów w określonym czasie, dlatego najważniejszą informacją dla nich jest to, z ilu takich placówek mogą otrzymać pomoc na czas. Nasi bohaterowie z CovMed zostali poproszeni o usprawnienie systemu transportowania specyfików między placówkami medycznymi.
+
+Istnieje n placówek i m dróg pomiędzy nimi. Przebycie drogi między dwoma placówkami połączonymi drogą zajmuje godzinę. Może istnieć więcej niż jedna droga łącząca dwie placówki. Mogą również istnieć placówki, pomiędzy którymi nie istnieje żadna ścieżka komunikacyjna. Dana placówka s może wysłać samochód transportowy do innej placówki i przywieźć coś z powrotem. Uznajemy, że preparaty mogą zostać dostarczone na czas, jeżeli podróż samochodu odbędzie się w czasie t godzin lub mniejszym. Ada i Serweryn dla podanej konfiguracji placówek i dróg pomiędzy nimi chcą odpowiedzieć na pytanie, ile godzin trwałaby podróż samochodu do placówki najbardziej oddalonej od s oraz do ilu placówek możliwe jest wysłanie transportu, by otrzymać zaopatrzenie w określonym czasie.
+
+Wejście
+W pierwszej linii wejścia podane są 4 liczby naturalne n, m, s i d, gdzie n jest liczbą placówek, m liczbą dróg pomiędzy nimi, s numerem placówki wysyłającej transport medyczny, a d maksymalną liczbą godzin, jaką placówka s może czekać na transport. W kolejnych m liniach podane są pary liczb naturalnych odpowiadających numerom placówek, pomiędzy którymi znajduje się droga. Placówki numerowane są od 0.
+
+Wyjście
+Na wyjściu program ma wypisać ile godzin trwałaby podróż do najdalszej placówki oraz ile placówek znajduje się dostatecznie blisko, by samochód wrócił na czas.
+
+2 ≤ n ≤ 1000
+Przykład
+Wejście:
+7 6 0 5
+1 0
+0 2
+2 3
+3 4
+2 5
+2 6
+Wyjście:
+3 5

@@ -1,0 +1,47 @@
+Treść zadania
+Naukowcy CovMed mają całkiem sporo próbek do przebadania w laboratorium. Jednak powiedzieć, że mają tam bałagan, to jakby nie powiedzieć nic. Każdego dnia przekopują się przez stosy probówek szukając tych potrzebnych. Kierownik mając tej sytuacji serdeczcnie dość zlecił im zrobienie ewidencji uwzględniającej oznaczenia próbek oraz datę pobrania. Naukowcy uznali, że najłatwiej będzie jeśli poproszą o pomoc dział IT.
+
+Na Adę i Serweryna czekało więc nowe zadanie. Dostali do napisania program, do którego badacze będą mogli wprowadzić listę próbek, a następnie w zależności od ich wyboru uszeregować je leksykograficznie względem oznaczeń lub od najmłodszej do najstarszej próbki. Zarówno oznaczenia jak i czas pobrania próbki mogą się powtarzać (ale kierownik jeszcze o tym nie wie).
+
+Wejście
+W pierwszej linii wejścia znajduje się liczba naturalna t, czyli liczba zestawów danych. Każdy zestaw danych składa się z liczby naturalnej n, czyli liczby próbek oraz n linii, w których znajdują się opisy próbek. Opis próbki składa się z oznaczenia próbki s – jednowyrazowego napisu i czasu pobrania próbki x – zapisanego jako liczba całkowita (im niższa liczba, tym starsza próbka). W ostatniej linii każdego zestawu jest liczba 0, jeżeli próbki mamy uszeregować względem oznaczeń lub liczba 1, jeżeli względem czasu pobrania próbki.
+
+1 ≤ t ≤ 10
+1 ≤ n ≤ 50000
+Wyjście
+Na wyjściu dla każdego zestawu danych należy wypisać oznaczenia i czasy pobrania wszystkich próbek w odpowiedniej kolejności. Oznaczenie i czas pobrania próbki powinny być zapisane w formacie: s-x. Podczas porządkowania względem oznaczeń w przypadku tych samych oznaczeń o kolejnosci decyduje wiek próbki. Podczas porządkowania względem wieku próbki w przypadku tych samych czasów pobrania o kolejnosci decyduje oznaczenie. Dla tych samych oznaczeń i czasu pobrania algorytm ma zachować się stabilnie.
+
+UWAGA! Rozwiązaniem powinien być program korzystający z samodzielnie zaimplementowanego algorytmu sortującego oraz niewykorzystujący biblioteki STL.
+
+Przykład
+Wejście:
+4
+4
+Probka1 7329410
+MojaProbka 95103
+TestTestTest 124134
+MojaProbka 129517
+0
+4
+Probka1 7329410
+MojaProbka 95103
+TestTestTest 124134
+MojaProbka 129517
+1
+4
+Probka1 95103
+MojaProbka 95103
+TestTestTest 124134
+MojaProbka 129517
+1
+4
+Probka1 95103
+MojaProbka 95103
+Probka1 95103
+Probka2 95103
+0
+Wyjście:
+MojaProbka-129517 MojaProbka-95103 Probka1-7329410 TestTestTest-124134
+Probka1-7329410 MojaProbka-129517 TestTestTest-124134 MojaProbka-95103
+MojaProbka-129517 TestTestTest-124134 MojaProbka-95103 Probka1-95103
+MojaProbka-95103 Probka1-95103 Probka1-95103 Probka2-95103
